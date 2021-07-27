@@ -1,0 +1,419 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>3 myAGV - Handle control · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="屏幕.html" />
+    
+    
+    <link rel="prev" href="地图导航.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Introduce</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="en介绍.html">
+            
+                <a href="en介绍.html">
+            
+                    
+                    1 myAGV - Product introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="初次使用.html">
+            
+                <a href="初次使用.html">
+            
+                    
+                    2 myAGV - Quick start
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="小车建图.html">
+            
+                <a href="小车建图.html">
+            
+                    
+                    1 myAGV - Mapping
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="地图导航.html">
+            
+                <a href="地图导航.html">
+            
+                    
+                    2 myAGV - Map navigation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6" data-path="手柄控制.html">
+            
+                <a href="手柄控制.html">
+            
+                    
+                    3 myAGV - Handle control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="屏幕.html">
+            
+                <a href="屏幕.html">
+            
+                    
+                    4 myAGV - Connection screen
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Compound robot</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="定位.html">
+            
+                <a href="定位.html">
+            
+                    
+                    1 myAGV - Camera precise positioning
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="机械臂.html">
+            
+                <a href="机械臂.html">
+            
+                    
+                    2 myAGV - Manipulator connection
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >3 myAGV - Handle control</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="myagv-ps4-controller">myAGV PS4 controller</h1>
+<h2 id="1connect-the-handle">1.Connect the handle</h2>
+<h3 id="1establish-a-data-connection-channel-for-the-serial-port-and-bluetooth-protocol-layer">1.Establish a data connection channel for the serial port and Bluetooth protocol layer</h3>
+<p>Open a console terminal (shortcut <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>) and enter the following instructions at the terminal:</p>
+<pre><code class="lang-bash">sudo hciattach /dev/ttyAMA0 bcm43xx 921600 noflow -
+</code></pre>
+<p>Mark of Success: </p>
+<blockquote>
+<p>Device setup complete</p>
+</blockquote>
+<p>If timeout runs again until Device setup complete appears.</p>
+<h3 id="2register-for-bluetooth-control">2.Register for Bluetooth control</h3>
+<p>Enter the following command in the terminal to register Bluetooth control and enter the Bluetooth control command line:</p>
+<pre><code class="lang-bash">sudo bluetoothctl
+</code></pre>
+<h3 id="3power-on">3.power on</h3>
+<p>Enter the following command at the terminal:</p>
+<pre><code class="lang-bash">power on
+</code></pre>
+<p>Mark of Success:</p>
+<blockquote>
+<p>Agent registered</p>
+</blockquote>
+<h3 id="4discoverable-on">4.discoverable on</h3>
+<p>Enter the following command at the terminal:</p>
+<pre><code class="lang-bash">discoverable on
+</code></pre>
+<p>Mark of Success:</p>
+<blockquote>
+<p>Changing discoverable on succeeded</p>
+<h3 id="5scan-on">5.scan on</h3>
+<p>Enter the following command at the terminal:</p>
+</blockquote>
+<pre><code class="lang-c">scan on
+</code></pre>
+<p>Mark of Success:</p>
+<blockquote>
+<p>Discovery started</p>
+<h3 id="6the-pairing-is-made">6.The pairing is made</h3>
+<p>1.First press <strong>ps</strong> and <strong>share</strong> for five seconds and pair when the indicator flashes quickly
+<img src="../image/&#x5C0F;&#x8F66;ps4&#x624B;&#x67C4;&#x63A7;&#x5236;/&#x624B;&#x67C4;&#x56FE;&#x7247;.png" alt="&#x624B;&#x67C4;&#x56FE;&#x7247;">
+2.Finds the Bluetooth logo in the top right corner of the interface and clicks on the Bluetooth-&gt; Devices, to see the address of the remote handle, like my one here is 8C:41:F2:A1:2D:6A
+<img src="../image/&#x5C0F;&#x8F66;ps4&#x624B;&#x67C4;&#x63A7;&#x5236;/&#x84DD;&#x7259;1.png" alt="&#x84DD;&#x7259;1">
+<img src="../image/&#x5C0F;&#x8F66;ps4&#x624B;&#x67C4;&#x63A7;&#x5236;/&#x84DD;&#x7259;2.png" alt="&#x84DD;&#x7259;2">
+3.pairs our handle device and enters in the terminal (the ADDR here is the address we just read now, and the device address you read when actually connected):</p>
+</blockquote>
+<pre><code class="lang-bash">pair  8C:41:F2:A1:2D:6A  //The ADDR here is the address we <span class="hljs-built_in">read</span> just now and enter the device address you <span class="hljs-built_in">read</span> when actually connected.
+</code></pre>
+<p>4.Connects our handle device, enter in the terminal (ADDR here is the address we just read, enter the device address you read when actually connected):</p>
+<pre><code class="lang-bash">connect 8C:41:F2:A1:2D:6A  //The ADDR here is the address we <span class="hljs-built_in">read</span> just now, and enter the device address you <span class="hljs-built_in">read</span> when actually connected.
+</code></pre>
+<p>5.You can see that the device connection is successful and the handle indicator is always blue
+Mark of Success:</p>
+<blockquote>
+<p>Connected&#xFF1A;yes</p>
+</blockquote>
+<p><img src="../image/&#x5C0F;&#x8F66;ps4&#x624B;&#x67C4;&#x63A7;&#x5236;/&#x84DD;&#x7259;&#x8FDE;&#x63A5;&#x6210;&#x529F;.png" alt="&#x84DD;&#x7259;&#x8FDE;&#x63A5;&#x6210;&#x529F;"></p>
+<h2 id="2open-the-launch-file-of-myagv">2.Open the launch file of myAGV</h2>
+<p>Open a new console terminal and enter on the command line:</p>
+<pre><code class="lang-bash">roslaunch navigation_demo myAGV_navigation.launch
+</code></pre>
+<p>Mark of Success:</p>
+<blockquote>
+<p>First imu received.</p>
+</blockquote>
+<p><img src="../image/&#x5C0F;&#x8F66;ps4&#x624B;&#x67C4;&#x63A7;&#x5236;/&#x5F00;&#x542F;launch&#x7EC8;&#x7AEF;.png" alt="&#x5F00;&#x542F;&#x5C0F;&#x8F66;launch&#x7EC8;&#x7AEF;"></p>
+<h2 id="3open-the-handle-control-launch-file">3.Open the handle control launch file</h2>
+<p>Open a new console terminal and enter on the command line:</p>
+<pre><code class="lang-bash">roslaunch ds4_driver ds4_twist.launch
+</code></pre>
+<p>Mark of Success&#xFF1A;Connected to Bluetooth Controller +[ADDR] </p>
+<p><img src="../image/&#x5C0F;&#x8F66;ps4&#x624B;&#x67C4;&#x63A7;&#x5236;/&#x5F00;&#x542F;&#x84DD;&#x7259;launch&#x7EC8;&#x7AEF;.png" alt="&#x5F00;&#x542F;&#x84DD;&#x7259;launch&#x7EC8;&#x7AEF;"></p>
+<p>If you successfully get here, you can successfully use the handle to control the walking of myAGV. Because the handle has no speed regulation function, the speed will be faster, so you should drive carefully.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="地图导航.html" class="navigation navigation-prev " aria-label="Previous page: 2 myAGV - Map navigation">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="屏幕.html" class="navigation navigation-next " aria-label="Next page: 4 myAGV - Connection screen">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"3 myAGV - Handle control","level":"1.6","depth":1,"next":{"title":"4 myAGV - Connection screen","level":"1.7","depth":1,"path":"page/屏幕.md","ref":"page/屏幕.md","articles":[]},"previous":{"title":"2 myAGV - Map navigation","level":"1.5","depth":1,"path":"page/地图导航.md","ref":"page/地图导航.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"page/手柄控制.md","mtime":"2021-07-27T13:36:16.451Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-27T13:39:58.285Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,373 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>1 myAGV - Camera precise positioning · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="机械臂.html" />
+    
+    
+    <link rel="prev" href="屏幕.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Introduce</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="en介绍.html">
+            
+                <a href="en介绍.html">
+            
+                    
+                    1 myAGV - Product introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="初次使用.html">
+            
+                <a href="初次使用.html">
+            
+                    
+                    2 myAGV - Quick start
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="小车建图.html">
+            
+                <a href="小车建图.html">
+            
+                    
+                    1 myAGV - Mapping
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="地图导航.html">
+            
+                <a href="地图导航.html">
+            
+                    
+                    2 myAGV - Map navigation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="手柄控制.html">
+            
+                <a href="手柄控制.html">
+            
+                    
+                    3 myAGV - Handle control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="屏幕.html">
+            
+                <a href="屏幕.html">
+            
+                    
+                    4 myAGV - Connection screen
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Compound robot</li>
+        
+        
+    
+        <li class="chapter active" data-level="2.1" data-path="定位.html">
+            
+                <a href="定位.html">
+            
+                    
+                    1 myAGV - Camera precise positioning
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="机械臂.html">
+            
+                <a href="机械臂.html">
+            
+                    
+                    2 myAGV - Manipulator connection
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >1 myAGV - Camera precise positioning</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="myagv-precise-camera-positioning">myAGV Precise Camera Positioning</h1>
+<h2 id="1camera-positioning-principle">1.Camera Positioning Principle</h2>
+<p>In the positioning process, we used Aruco identification to assist positioning</p>
+<blockquote>
+<p>An ArUco marker is a binary square marker, which is composed of a wide black edge and an internal binary matrix, and the internal matrix determines their IDS.  The black boundary facilitates rapid image detection, binary coding can verify THE ID, and allows the application of error detection and correction techniques.  The size of marker determines the size of the internal matrix.  For example, in the figure below, a 4x4 marker consists of 16bits<br><img src="../image/&#x5C0F;&#x8F66;&#x7CBE;&#x51C6;&#x5B9A;&#x4F4D;/Aruco&#x4E8C;&#x7EF4;&#x7801;&#x4F8B;&#x5B50;.jpg" alt="Aruco&#x4E8C;&#x7EF4;&#x7801;&#x4F8B;&#x5B50;">
+It should be noted that we need to detect the rotation of a Marker in space. However, the detection process needs to determine its initial Angle, so every corner needs to be clear and ambiguous, ensuring that the above mentioned point is also accomplished by binary coding.  When the Marker is rotated in the space, the corresponding binary information will also change. According to the variation, the position and attitude of the Marker relative to the camera in the space can be obtained, as shown in the figure below. The coordinate system and boundary of the Marker can also be displayed in the camera screen:<br><img src="../image/&#x5C0F;&#x8F66;&#x7CBE;&#x51C6;&#x5B9A;&#x4F4D;/aruco&#x5750;&#x6807;&#x8FB9;&#x6846;.jpg" alt="aruco&#x5750;&#x6807;&#x8FB9;&#x6846;">
+Flow chart as below&#xFF1A;
+<img src="../image/&#x5C0F;&#x8F66;&#x7CBE;&#x51C6;&#x5B9A;&#x4F4D;/flowchart.png" alt="folwchart"></p>
+</blockquote>
+<h2 id="2-precise-positioning-environment-preparation">2. Precise positioning environment preparation</h2>
+<h3 id="1generate-an-aruco-marker">1.Generate an Aruco marker</h3>
+<p>First we need to parper two Aruco marker&#xFF0C;it can be generated automatically in this webpage&#xFF1A;<a href="https://chev.me/arucogen/" target="_blank">https://chev.me/arucogen/</a>
+<img src="../image/&#x5C0F;&#x8F66;&#x7CBE;&#x51C6;&#x5B9A;&#x4F4D;/&#x6807;&#x8BB0;&#x751F;&#x6210;&#x7F51;&#x9875;.png" alt="&#x6807;&#x8BB0;&#x751F;&#x6210;&#x7F51;&#x9875;"></p>
+<p>In our demo,We chose a dictionary set of 6*6, with the size of 50mm and two marker markers with the ID of 3 and 4 respectively. Then click the red &quot;Save&quot; in the picture to save the generated marker in the local format of PDF, and then the actual marker can be printed out with the printer for later positioning and use.  </p>
+<h3 id="2place-the-aruco-marker">2.Place the Aruco marker</h3>
+<p>As mentioned above, the precise positioning of the camera is based on the position analysis of two characteristic Aruco markers to obtain the precise positioning path planning.  As shown in the figure below, paste the Aruco mark printed in the previous step on both sides of the target point we want to reach.<br><strong>Note: The distance between the two mark distances should be consistent as far as possible, so as to ensure the accuracy of distance calculation</strong>
+<img src="../image/&#x5C0F;&#x8F66;&#x7CBE;&#x51C6;&#x5B9A;&#x4F4D;/&#x6807;&#x8BB0;&#x653E;&#x7F6E;.jpg" alt="&#x6807;&#x8BB0;&#x653E;&#x7F6E;"></p>
+<h2 id="3software-operation">3.Software operation</h2>
+<h3 id="1open-myagv-navigation-file">1.Open myAGV navigation file</h3>
+<p> first open a terminal(shoutcut key<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>),enter instruction as below</p>
+<pre><code class="lang-c">roslaunch navigation_demo myAGV_navigation.launch
+</code></pre>
+<h3 id="2run-the-precision-locator-program">2.Run the precision locator program</h3>
+<p>open another terminal&#xFF0C;enter code as below&#xFF1A;</p>
+<pre><code class="lang-c">rosrun navigation_demo aibot_detect_marker.py
+</code></pre>
+<p>  <em>It is suggested that the initial position of the car should be greater than 40cm away from the target so that the camera can simultaneously take pictures of the marks on the left and right sides</em></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="屏幕.html" class="navigation navigation-prev " aria-label="Previous page: 4 myAGV - Connection screen">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="机械臂.html" class="navigation navigation-next " aria-label="Next page: 2 myAGV - Manipulator connection">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"1 myAGV - Camera precise positioning","level":"2.1","depth":1,"next":{"title":"2 myAGV - Manipulator connection","level":"2.2","depth":1,"path":"page/机械臂.md","ref":"page/机械臂.md","articles":[]},"previous":{"title":"4 myAGV - Connection screen","level":"1.7","depth":1,"path":"page/屏幕.md","ref":"page/屏幕.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"page/定位.md","mtime":"2021-07-27T13:36:16.451Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-27T13:39:58.285Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
