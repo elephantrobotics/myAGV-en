@@ -2,7 +2,7 @@
 
 ![图8](./image/小车初次使用/图8.jpg)
 
-### Product introduction
+### 1 Product introduction
 
 The world's smallest 6-DOF compound robot, developed jointly by elephant robot and Hua Wei, is fully self-produced. The manipulator uses mycobot and loads camera eye_ in_ Hand design.AGV adopts mcnamu wheel + lidar + high-precision camera. Control mode: autonomous navigation, handle control, keyboard control, etc.
 
