@@ -11,6 +11,7 @@
 - [2 Map navigation](2-development/地图导航.md)
 - [3 PS4 controller ](2-development/手柄控制.md)
 - [4 Screen connection](2-development/屏幕.md)
+- [4 myAGV and myCobot linkage](2-development/小车机械臂联动_en.md)
 
 ## Compound robot
 
