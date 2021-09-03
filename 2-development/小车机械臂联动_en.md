@@ -41,7 +41,7 @@ First create a node，my node here is call 'my_xy_pub' this node is used to send
 
 1. Open a console terminal (shortcut key <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>) and enter the following instructions:
 ```bash
-roslaunch navigation_demo myAGV_navigetion.launch
+roslaunch navigation_demo myagv_navigetion.launch
 ```
 2. Open another terminal，and enter the following instructions：
 ```bash
